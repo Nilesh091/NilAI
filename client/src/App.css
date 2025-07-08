@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out;
+}
+
+.chat-history {
+  scrollbar-width: thin;
+  scrollbar-color: #a78bfa transparent;
+}
+
+.chat-history::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-history::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+  background-color: #a78bfa;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+/* Animated background gradient for the whole app */
+body, #root {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e0ffe9 0%, #c7d2fe 100%);
+  background-size: 400% 400%;
+  animation: gradient-move 12s ease-in-out infinite;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NilAI avatar glow */
+.nilai-avatar {
+  box-shadow: 0 0 24px 6px #34d39988, 0 0 48px 12px #2563eb44;
+  animation: avatar-glow 2s alternate infinite;
+}
+@keyframes avatar-glow {
+  0% { box-shadow: 0 0 12px 2px #34d39988, 0 0 24px 6px #2563eb44; }
+  100% { box-shadow: 0 0 32px 12px #34d399cc, 0 0 64px 24px #2563eb88; }
+}
+
+/* Glassmorphism for chat container */
+.glassmorph {
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 2rem;
+  border: 1.5px solid rgba(255,255,255,0.25);
+}
+
+/* Enhanced message bubbles */
+.bubble-user {
+  background: linear-gradient(90deg, #34d399 0%, #2563eb 100%);
+  color: #fff;
+  border-radius: 2rem 2rem 0.5rem 2rem;
+  box-shadow: 0 2px 12px 0 #34d39933;
+}
+.bubble-bot {
+  background: #fff;
+  color: #2563eb;
+  border-radius: 2rem 2rem 2rem 0.5rem;
+  border: 1.5px solid #e0e7ff;
+  box-shadow: 0 2px 12px 0 #2563eb11;
+}
+
+/* Modern input area */
+.input-glass {
+  background: rgba(255,255,255,0.7);
+  border: 1.5px solid #a5b4fc;
+  box-shadow: 0 2px 8px 0 #a5b4fc22;
+  border-radius: 1rem;
+  transition: box-shadow 0.2s;
+}
+.input-glass:focus {
+  box-shadow: 0 4px 16px 0 #2563eb33;
+}
+
+/* Polished scrollbar */
+.chat-history::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, #34d399 0%, #2563eb 100%);
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
