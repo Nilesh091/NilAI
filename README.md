@@ -46,7 +46,8 @@ git clone https://github.com/Nilesh091/NilAI.git
 cd NilAI
 ```
 
-###2. Install Dependencies
+### 2. Install Dependencies
+
 Install dependencies in both frontend and backend directories:
 
 ```bash
@@ -57,7 +58,8 @@ cd ../server
 npm install
 ```
 
-###3. Add Environment Variables
+### 3. Add Environment Variables
+
 Create a .env file inside the server/ directory and add:
 
 ```bash
@@ -65,19 +67,21 @@ GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 Replace with your actual Google Gemini API key from Google AI Studio.
-###4. Run the Backend
+
+### 4. Run the Backend
 
 ```bash
 cd server
 node index.js
 ```
 
-###5. Run the Frontend
+### 5. Run the Frontend
 
 ```bash
 cd client
 npm run dev
 ```
 
-👨‍💻 Author
-Made with ❤️ by Nilesh Ranjan Sahu
+### 👨‍💻 Author
+
+-Made with ❤️ by Nilesh Ranjan Sahu
